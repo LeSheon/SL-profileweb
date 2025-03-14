@@ -1,0 +1,39 @@
+.monopoly {
+    text-align: center;
+  
+  &__board {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for the 2x2 grid */
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+//   .board-space {
+//     padding: 20px;
+//     background-color: #eee;
+//     border-radius: 8px;
+//     text-align: center;
+//     font-weight: bold;
+//   }
+  
+//   .board-space.active {
+//     background-color: #4caf50;
+//     color: white;
+//   }
+  
+}
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
