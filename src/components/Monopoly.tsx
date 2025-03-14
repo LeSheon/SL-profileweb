@@ -21,7 +21,7 @@ export default function Monopoly() {
                 {
                     // Map the key and render 4 items in 2x2 board
                     boardArray.map((_, i) => (
-                        <div className={"monopoly_board-item" + (i === position ? "--active" : "")} key={i}>
+                        <div className={`monopoly__board-item${(i === position ? "--active" : "")}`} key={i}>
                             item {i}
                         </div>
                     ))
