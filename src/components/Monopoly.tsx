@@ -11,12 +11,21 @@ export default function Monopoly() {
         setPosition((prev) => (prev + dice) %4);
     }
 
+    const boardArray = new Array(4).fill(0);
+
     return(
         <>
         <section className="monopoly">
             <h2>Monopoly Board in Test</h2>
             <div className="monopoly__board">
-
+                {
+                    // Map the key and render 4 items in 2x2 board
+                    boardArray.map((_, i) => (
+                        <div className={"monopoly_board-item" + (i === position ? "--active" : "")} key={i}>
+                            item {i}
+                        </div>
+                    ))
+                }
             </div>
             <button className="monopoly__dice-roll" onClick={() => rollDice()}>
                 Roll Dice
@@ -25,24 +34,3 @@ export default function Monopoly() {
         </>
     );
 };
-
-//   return (
-//     <div className="monopoly-board">
-//       <h2>Monopoly Game</h2>
-//       <div className="board">
-//         {/* Create a 2x2 grid */}
-//         {[...Array(4)].map((_, index) => (
-//           <div
-//             key={index}
-//             className={`board-space ${index === position ? "active" : ""}`}
-//           >
-//             {index + 1}
-//           </div>
-//         ))}
-//       </div>
-//       <button onClick={rollDice}>Roll Dice</button>
-//     </div>
-//   );
-// };
-
-// export default Monopoly;
